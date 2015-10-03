@@ -3,7 +3,30 @@ $(function() {
     console.log( "Scanning for viruses..." );
 });
 
+
 function redirect(){
 	window.location.href="https://www.youtube.com/watch?v=QH2-TGUlwu4"; 
 
 }
+
+function genRandString(num){
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for( var i=0; i < num; i++ )
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+$(document).ready(function(){
+  cycleHints();
+});
+
+function cycleHints(){
+  window.setInterval(function(){
+    $("textarea").attr("placeholder", genRandString(150));
+    $("input").attr("placeholder", genRandString(50));
+  }, 100);
+}
+
