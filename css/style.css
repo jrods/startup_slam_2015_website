@@ -7,5 +7,10 @@ section {
 	padding-bottom: 80px;
 }
 .navbar-inverse {
-  background-color: #690000;
+  background-color: #FF00FF;
+}
+.team-pic{
+    height:300px;
+    width:300px;
+    border-radius:50%;
 }
